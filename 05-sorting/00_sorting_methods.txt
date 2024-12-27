@@ -1,0 +1,1 @@
+1. Bubble Sort - Moving the largest value to last position one after another in each iteration.
