@@ -1,12 +1,13 @@
 from DoublyLinkedList import ListNode
 
-
+# First In First Out (FIFO)
 class StackByLinkedList:
   def __init__(self):
     self.head = None
     self.tail = None
     self._size = 0
 
+  # Time : O(1) Space : O(1)
   def push(self, key):
     node = ListNode(key)
     if not self.head:
@@ -18,20 +19,25 @@ class StackByLinkedList:
     self._size += 1
     return self.tail
 
+  # Time : O(1)
   def pop(self):
+    if not self.tail:
+      return None
     tail = self.tail
-    if self.tail:
-      if self.tail == self.head:
-        self.head = self.tail.perv
-        self.head.prev = None
-      self.tail = self.tail.prev
+    if not tail.prev:
+      self.head = self.tail = None
+    else:
+      self.tail = tail.prev
       self.tail.next = None
-      self._size -= 1
+    tail.prev = None
+    self._size -= 1
     return tail
   
+  # Time : O(1)
   def peek(self):
     return self.tail
   
+  # Time : O(1)
   def size(self):
     return self._size
   
