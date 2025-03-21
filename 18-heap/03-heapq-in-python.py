@@ -18,3 +18,10 @@ print(pq)
 
 print(heapq.heapreplace(pq, -1))
 print(pq)
+
+print(heapq.nsmallest(1, pq))
+print(pq)
+
+minHeap = []
+# heapq.heappop(minHeap)
+# minHeap.heappush(1)
