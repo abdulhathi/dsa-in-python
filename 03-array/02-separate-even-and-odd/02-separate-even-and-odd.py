@@ -1,4 +1,4 @@
-def seperate_even_and_odd(nums):
+def separate_even_and_odd(nums):
   even, odd = [], []
   for num in nums:
     if num % 2 == 0:
@@ -7,10 +7,10 @@ def seperate_even_and_odd(nums):
       odd.append(num)
   return even, odd
 
-res = seperate_even_and_odd([10, 41, 30, 15, 80])
+res = separate_even_and_odd([10, 41, 30, 15, 80])
 print(res)
 
-res = seperate_even_and_odd([10, 20, 30])
+res = separate_even_and_odd([10, 20, 30])
 print(res)
 
 
