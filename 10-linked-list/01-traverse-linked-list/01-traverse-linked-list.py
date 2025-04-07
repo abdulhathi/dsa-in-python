@@ -1,5 +1,7 @@
-from SinglyLinkedList import ListNode
-
+import sys
+import os
+sys.path.append(os.getcwd())
+from PythonDataStructures.SinglyLinkedList.ListNode import ListNode
 
 def traverse_linked_list(head):
   res = []

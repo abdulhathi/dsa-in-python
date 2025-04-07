@@ -1,5 +1,7 @@
-from CircularLinkedList import ListNode
-
+import sys
+import os
+sys.path.append(os.getcwd())
+from PythonDataStructures.CircularLinkedList.ListNode import ListNode
 
 def traverse_circular_linked_list(head):
   temp, res = head, []

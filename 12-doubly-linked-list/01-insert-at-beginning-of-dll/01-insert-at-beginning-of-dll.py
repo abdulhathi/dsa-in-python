@@ -1,5 +1,7 @@
-from DoublyLinkedList import ListNode
-
+import sys
+import os
+sys.path.append(os.getcwd())
+from PythonDataStructures.DoublyLinkedList.ListNode import ListNode
 
 def insert_at_beginning_of_doubly_linked_list(head, x):
   node = ListNode(x, None, head)
@@ -9,6 +11,5 @@ def insert_at_beginning_of_doubly_linked_list(head, x):
 
 
 head = ListNode.create([10, 15, 20])
-# print(head)
 res = insert_at_beginning_of_doubly_linked_list(head, 5)
 print(res)
