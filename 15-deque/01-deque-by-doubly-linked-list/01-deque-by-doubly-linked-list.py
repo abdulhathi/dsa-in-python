@@ -1,4 +1,7 @@
-from DoublyLinkedList import ListNode
+import sys
+import os
+sys.path.append(os.getcwd())
+from PythonDataStructures.DoublyLinkedList.ListNode import ListNode
 
 class DequeByDoublyLinkedList:
   def __init__(self):
