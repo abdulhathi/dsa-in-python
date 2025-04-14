@@ -1,4 +1,6 @@
-from BinarySearchTree import TreeNode
+import os, sys
+sys.path.append(os.getcwd())
+from PythonDataStructures.BinarySearchTree.TreeNode import TreeNode
 
 
 def search_in_binary_search_tree(root, key):

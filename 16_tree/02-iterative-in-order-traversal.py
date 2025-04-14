@@ -1,4 +1,6 @@
-from BinaryTree import TreeNode
+import sys, os
+sys.path.append(os.getcwd())
+from PythonDataStructures.BinaryTree.TreeNode import TreeNode
 
 
 def iterative_in_order_traversal(root):
