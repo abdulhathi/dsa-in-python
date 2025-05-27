@@ -1,12 +1,21 @@
-def bubble_sort(nums):
+from typing import List
+
+# * Time: O(n^2) Space: O(1)
+
+
+def bubble_sort(nums: List[int]) -> List[int]:
   n = len(nums)
-  for i in range(n):
-    large_val_pos = 0
-    for j in range(n-i):
-      if nums[j] > nums[large_val_pos]:
-        large_val_pos = j
-    nums[n-1-i], nums[large_val_pos] = nums[large_val_pos], nums[n-1-i]
+  for i in range(n-1):
+    swapped = False
+    for j in range(1, n-i):
+      if nums[j-1] > nums[j]:
+        nums[j-1], nums[j] = nums[j], nums[j-1]
+        swapped = True
+    if not swapped:
+      return nums
   return nums
 
-res = bubble_sort([2,10,8,7])
-print(res)
+
+print(bubble_sort([2, 10, 8, 7]))
+print(bubble_sort([10, 8, 20, 5]))
+print(bubble_sort([6, 8, 6, 6]))
