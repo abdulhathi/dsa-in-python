@@ -10,3 +10,13 @@ class ListNode:
       res.append(str(head.val))
       head = head.next
     return " -> ".join(res)
+
+  @staticmethod
+  def create(nums):
+    dummy = ListNode(0)
+    temp = dummy
+    for num in nums:
+      temp.next = ListNode(num)
+      temp = temp.next
+    self = dummy.next
+    return self

@@ -1,5 +1,11 @@
 {
   "python.analysis.extraPaths": [
     "./10-linked-list/SinglyLinkedList"
-  ]
+  ],
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }
 }
