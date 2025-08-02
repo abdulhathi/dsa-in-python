@@ -17,9 +17,8 @@ class ListNode:
 
   def __str__(self):
     head = self
-    res = ""
+    res = []
     while head:
-      res += f"{head.prev.val if head.prev else 'None'} <- {
-          head.val} -> {head.next.val if head.next else 'None'} \n"
+      res.append(str(head.val))
       head = head.next
-    return res
+    return f"None <- {' <=> '.join(res)} -> None"

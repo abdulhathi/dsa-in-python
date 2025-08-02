@@ -4,11 +4,19 @@ class ListNode:
     self.next = next
 
   def __str__(self):
-    head, res = self, []
-    if head:
-      res.append(f" -> {head.val}")
-      head = head.next
-      while head != self:
-        res.append(str(head.val))
-        head = head.next
-    return " -> ".join(res) + " -> "
+    temp, res = self, []
+    while temp.next != self:
+      res.append(str(temp.val))
+      temp = temp.next
+    res.append(str(temp.val))
+    return f"{' -> '.join(res)} -> {temp.next.val}"
+
+  @staticmethod
+  def create(nums):
+    dummy = ListNode(0)
+    temp = dummy
+    for num in nums:
+      temp.next = ListNode(num)
+      temp = temp.next
+    temp.next = dummy.next
+    return dummy.next

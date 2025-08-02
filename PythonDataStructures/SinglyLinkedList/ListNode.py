@@ -9,6 +9,7 @@ class ListNode:
     while head:
       res.append(str(head.val))
       head = head.next
+    res.append('N')
     return " -> ".join(res)
 
   @staticmethod
