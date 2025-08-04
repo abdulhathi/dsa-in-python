@@ -8,11 +8,13 @@
     "markdown": false,
     "scminput": false
   },
-  // "editor.quickSuggestions": {
-  //   "other": false,
-  //   "comments": false,
-  //   "strings": false
-  // },
-  // "editor.parameterHints.enabled": false,
-  // "editor.hover.enabled": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false,
+  },
+  "editor.parameterHints.enabled": false,
+  "editor.hover.enabled": false,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false
 }

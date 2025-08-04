@@ -3,7 +3,6 @@ import os
 sys.path.append(os.getcwd())
 from PythonDataStructures.SinglyLinkedList.ListNode import ListNode
 
-
 class MyStack:
   def __init__(self):
     self.head = None
@@ -36,7 +35,6 @@ class MyStack:
       res.append(str(temp.val))
       temp = temp.next
     return ",".join(res)
-
 
 stack = MyStack()
 print(stack.pop())

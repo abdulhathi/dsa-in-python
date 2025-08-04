@@ -1,7 +1,7 @@
-def balanced_parenthesis(paranthesis):
+def balanced_parenthesis(parenthesis):
   st = []
   dic = {'}': '{', ')': '(', ']': '['}
-  for p in paranthesis:
+  for p in parenthesis:
     if p in dic:
       if not st:
         return False
