@@ -19,3 +19,7 @@ li = ["".join(val) for val in dic.values()]
 print(li)
 print(True if li[0] == li[1] or li[0][::-1] == li[1] else False)
 
+frequency = Counter([1,1,1,2,2,3])
+print(frequency)
+for key,val in frequency.items():
+  print(key,val)

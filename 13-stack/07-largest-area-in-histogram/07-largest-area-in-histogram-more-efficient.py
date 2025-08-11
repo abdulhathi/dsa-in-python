@@ -27,10 +27,3 @@ def largest_area_in_histogram_more_efficient(bars):
 
 res = largest_area_in_histogram_more_efficient([6, 2, 5, 4, 1, 5, 6])
 print(res)
-
-print(6//(-132))
-
-print(math.ceil(13/5))
-print(round(13/5))
-print(math.floor(14.5/5))
-print(math.ceil(6/-132))
