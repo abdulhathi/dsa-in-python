@@ -1,12 +1,14 @@
 from typing import List
-from collections import Counter, defaultdict
 
 
 def frequencies_in_a_sorted_array(nums: List[int]) -> dict:
-  dic = defaultdict(int)
-  for num in nums:
-    dic[num] += 1
-  return dic
+  freq = [[nums[0], 1]]
+  for i in range(1, len(nums)):
+    if freq[len(freq)-1][0] != nums[i]:
+      freq.append([nums[i], 1])
+    else:
+      freq[len(freq)-1][1] += 1
+  return freq
 
   # return Counter(nums)
 

@@ -2,18 +2,17 @@ from typing import List
 
 
 def maximum_length_even_odd_subarray(nums: List[int]) -> int:
-  max_len, curr_max_len = 1, 1
-  is_even = False if nums[0] % 2 == 0 else True
-  for i in range(1, len(nums)):
-    num = nums[i]
-    if (is_even and num % 2 == 0) or not is_even and num % 2 != 0:
-      curr_max_len += 1
-      is_even = not is_even
+  n = len(nums)
+  maxLength, currMaxLength = 0, 0
+  for i in range(n):
+    if nums[i-1] % 2 != 0 and nums[i] % 2 == 0:
+      currMaxLength += 1
+    elif nums[i-1] % 2 == 0 and nums[i] % 2 != 0:
+      currMaxLength += 1
     else:
-      max_len = max(max_len, curr_max_len)
-      curr_max_len = 0
-      is_even = True
-  return max(max_len, curr_max_len)
+      maxLength = max(currMaxLength, maxLength)
+      currMaxLength = 0
+  return max(currMaxLength, maxLength)
 
 
 print(maximum_length_even_odd_subarray([10, 12, 14, 7, 8]))

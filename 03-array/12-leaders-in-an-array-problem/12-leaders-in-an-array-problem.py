@@ -15,6 +15,7 @@ def leaders_in_an_array_problem(nums: List[int]) -> List[int]:
 
 
 print(leaders_in_an_array_problem([7, 10, 4, 3, 6, 5, 2]))
+print(leaders_in_an_array_problem([7, 10, 4, 10, 6, 5, 2]))
 print(leaders_in_an_array_problem([10, 20, 30]))
 print(leaders_in_an_array_problem([30, 20, 10]))
 
