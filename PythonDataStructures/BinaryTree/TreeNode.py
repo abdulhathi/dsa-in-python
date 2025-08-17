@@ -15,8 +15,10 @@ class TreeNode:
     while i < n:
       curr = q.popleft()
       curr.left, i = TreeNode(items[i]) if items[i] else None, i+1
-      q.append(curr.left)
+      if curr.left:
+        q.append(curr.left)
       if i < n:
         curr.right, i = TreeNode(items[i]) if items[i] else None, i+1
-        q.append(curr.right)
+        if curr.right:
+          q.append(curr.right)
     return root

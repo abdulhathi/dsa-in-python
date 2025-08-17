@@ -10,3 +10,6 @@ for i in range(n-1, -1, -1):
   res.append(i)
 print(res)
 
+print([i for i in range(1, 25+1)])
+
+print(sorted([3,2,1]))

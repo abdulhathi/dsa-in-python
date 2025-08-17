@@ -20,3 +20,13 @@ q.appendleft(2)
 q.appendleft(3)
 for val in q:
   print(val)
+
+l = [1, 2, 3, 4, 5, 6, 7]
+dq = deque()
+
+dq.append(l[0])
+dq.append(l[1])
+
+for x in l[2:]:
+  dq.append(x)
+print(dq)
