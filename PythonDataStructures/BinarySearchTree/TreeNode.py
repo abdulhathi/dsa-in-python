@@ -34,4 +34,4 @@ class TreeNode:
       res.append(str(curr.val))
       q.append(curr.left)
       q.append(curr.right)
-    return ",".join(res)
+    return "["+",".join(res)+"]"
