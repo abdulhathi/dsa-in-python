@@ -22,3 +22,15 @@ class TreeNode:
         if curr.right:
           q.append(curr.right)
     return root
+
+  def __str__(self):
+    root = self
+    q, res = deque([root]), []
+    while q:
+      curr = q.popleft()
+      if not curr:
+        continue
+      res.append(str(curr.val))
+      q.append(curr.left)
+      q.append(curr.right)
+    return "["+",".join(res)+"]"

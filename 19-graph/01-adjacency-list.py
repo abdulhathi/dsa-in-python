@@ -19,6 +19,3 @@ add_edge(adjList, 0, 1)
 print_graph(adjList)
 add_edge(adjList,2,3)
 print_graph(adjList)
-
-
-abcdefghijklmnopqrstuvwzyz

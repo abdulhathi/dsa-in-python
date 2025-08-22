@@ -12,3 +12,9 @@ s = set([3, 5, 6, 7, 10, 8])
 l = list(s)
 heapq.heapify(l)
 print(l)
+
+print(s.update(set([20])))
+print(s)
+
+s.update(set([30,40]))
+print(s)

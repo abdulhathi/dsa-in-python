@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def breadth_first_search(adjList):
   vertices_count = len(adjList)
   visited = [False] * vertices_count
