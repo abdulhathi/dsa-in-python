@@ -1,4 +1,4 @@
-import heapq
+import heapq, math
 
 # * Time : O(v+e) Space:O(e)
 def primsMST(adjList):
@@ -6,6 +6,8 @@ def primsMST(adjList):
   minHeap = []
   visited = set()
   heapq.heappush(minHeap, [0, 0])
+  dist = [math.inf] * n
+  dist[0] = [0]
   res = 0
   while minHeap:
     w, u = heapq.heappop(minHeap)
@@ -16,7 +18,9 @@ def primsMST(adjList):
     for v, w in adjList[u]:
       if v in visited:
         continue
-      heapq.heappush(minHeap, [w, v])
+      if dist[v] > w:
+        dist[v] = w
+        heapq.heappush(minHeap, [w, v])
 
   return res
 
@@ -30,3 +34,4 @@ adjList = [
     [[2, 4], [4, 2]]
 ]
 print(primsMST(adjList))
+

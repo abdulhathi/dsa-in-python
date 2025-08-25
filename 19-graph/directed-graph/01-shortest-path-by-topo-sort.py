@@ -35,10 +35,29 @@ def shortestPathByTopoSort(adjListWithWeight, s):
         dist[v] = dist[u]+w
   return dist
 
-adjListWithWeight = [[[1,2],[4,1]],[[2,3]],[[3,6]],[],[[2,2],[5,4]],[[3,1]]]
+adjListWithWeight = [
+  [[1,2],[4,1]],
+  [[2,3]],
+  [[3,6]],
+  [],
+  [[2,2],[5,4]],
+  [[3,1]]]
 res = shortestPathByTopoSort(adjListWithWeight, 0)
 print(res)
 
 adjListWithWeight = [[[1,1]],[[2,3],[3,2]],[[3,4]],[]]
 res = shortestPathByTopoSort(adjListWithWeight, 1)
 print(res)
+
+# *
+# *     (0)------2------->(1) 
+# *      |                 |
+# *      1                 3  
+# *      |                 |
+# *      V                 V
+# *     (4)------2------->(2)
+# *      |                 |
+# *      4                 6
+# *      |                 |
+# *      V                 V
+# *     (5)------1------->(3)
