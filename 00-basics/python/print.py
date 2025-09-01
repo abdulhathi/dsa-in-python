@@ -1,0 +1,1 @@
+print('FirstName=', 'Abdul', 'LastName=', 'Mohamed Hussain')

@@ -9,3 +9,18 @@ def parentFunc():
   return a, b
 
 print(parentFunc())
+
+
+# * Empty function
+def fun1():
+  pass
+
+print(fun1())
+
+
+def f(x):
+  return x**2 + 3*x + 2
+
+print(f(1))
+
+print(1**2 + 3*1)
