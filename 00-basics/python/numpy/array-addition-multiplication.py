@@ -13,6 +13,8 @@ print(arr + 1)
 u = np.array([1,2])
 v = np.array([3,2])
 
+print(u+v)
+
 z = u * v
 print(z)
 
